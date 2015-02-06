@@ -46,10 +46,11 @@ require 'fb_graph2/collection'
 require 'fb_graph2/searchable'
 require 'fb_graph2/edge'
 [
-  '.',
+  '',
   'request_filter'
 ].each do |dir|
   Dir[File.join(__dir__, 'fb_graph2', dir, '*.rb')].each do |file|
+    puts file
     require file
   end
 end
