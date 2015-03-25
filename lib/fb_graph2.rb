@@ -50,7 +50,7 @@ require 'fb_graph2/edge'
   '.',
   'request_filter'
 ].each do |dir|
-  Dir[File.join(__dir__, 'fb_graph2', dir, '*.rb')].each do |file|
+  Dir[File.join(__dir__, 'fb_graph2', dir, '*.rb')].sort.each do |file|
     require file
   end
 end
