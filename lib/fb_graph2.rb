@@ -51,6 +51,6 @@ require 'fb_graph2/edge'
   'request_filter'
 ].each do |dir|
   Dir[File.join(__dir__, 'fb_graph2', dir, '*.rb')].sort.each do |file|
-    require file
+    require file unless file =~ /attribute_assigner/
   end
 end
